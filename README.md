@@ -13,17 +13,29 @@ The library is pretty simple and provides a very light layer of functions to wor
 ```js
     //whatever the import code is goes here 
 
-    obj = new OntologyService() //create a new service
+    //create a new service
+    obj = new RdfService() 
 
-    obj.instantiate("http://cls","http://x").then(console.log) //instantiate an RDFS class as http://x
-    obj.insertTriple("http://x","http://y","http://abc") //Add a triple
-    obj.insertTriple("http://x","http://yy","test","LITERAL","xsd:string") //add a literal triple
-    obj.addLiteral("http://x","http://yyy","another test literal") //slightly easier way to add a literal
+    //instantiate an RDFS class as http://x
+    obj.instantiate("http://cls","http://x").then(console.log) 
+
+    //Add a triple
+    obj.insertTriple("http://x","http://y","http://abc") 
+
+    //add a literal triple
+    obj.insertTriple("http://x","http://yy","test","LITERAL","xsd:string") 
+
+    //slightly easier way to add a literal
+    obj.addLiteral("http://x","http://yyy","another test literal") 
+
+    //Adding an rdfs comment literal
     obj.addComment("http://x","this is a comment")
 
-    obj.getAllElements().then(console.log) //get all the elements and print them
-    
-    obj.deleteNode("http://x") //we were never here
+    //get all the elements and print them
+    obj.getAllElements().then(console.log) 
+
+    //we were never here
+    obj.deleteNode("http://x") 
 ```
 
 
