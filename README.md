@@ -14,12 +14,15 @@ The library is pretty simple and provides a very light layer of functions to wor
     //whatever the import code is goes here 
 
     obj = new OntologyService() //create a new service
+
     obj.instantiate("http://cls","http://x").then(console.log) //instantiate an RDFS class as http://x
     obj.insertTriple("http://x","http://y","http://abc") //Add a triple
     obj.insertTriple("http://x","http://yy","test","LITERAL","xsd:string") //add a literal triple
     obj.addLiteral("http://x","http://yyy","another test literal") //slightly easier way to add a literal
     obj.addComment("http://x","this is a comment")
+
     obj.getAllElements().then(console.log) //get all the elements and print them
+    
     obj.deleteNode("http://x") //we were never here
 ```
 
