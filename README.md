@@ -10,7 +10,7 @@ TBC - once the module is in NPM we can fill this bit in
 
 The library is pretty simple and provides a very light layer of functions to work with RDF.
 
-```
+```js
     //whatever the import code is goes here 
 
     obj = new OntologyService() //create a new service
@@ -21,6 +21,6 @@ The library is pretty simple and provides a very light layer of functions to wor
     obj.addComment("http://x","this is a comment")
     obj.getAllElements().then(console.log) //get all the elements and print them
     obj.deleteNode("http://x") //we were never here
-```js
+```
 
 
